@@ -23,6 +23,10 @@ $sql = "INSERT INTO produtos (nome, tipo, descricao, valor_unitario, quantidade_
 VALUES ('$nome', '$tipo', '$descricao'
 , '$valor_unitario', '$quantidade_estoque', '$cor', '$disponivel', '$link_imagem', '$nome_foto')";
 if ($conn->query($sql) === TRUE) {
-    
+    echo "Produto inserida com sucesso!";
+    echo "redirecionamento...Login";
+    echo "<!-- Redireciona para uma URL específica em html -->
+<meta http-equiv='refresh' content='3;
+url=inserir_produto.html'>"
 }
 }
